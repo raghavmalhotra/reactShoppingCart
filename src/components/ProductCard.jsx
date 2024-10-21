@@ -1,5 +1,5 @@
 import { Thewanderingmonkeyman } from '../icons'
-export const ProductCard = ({ product, addToCart }) => {
+export const ProductCard = ({ product }) => {
   return (
     <div className=''>
       {/* <div className='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
@@ -108,10 +108,7 @@ export const ProductCard = ({ product, addToCart }) => {
             <span className='text-3xl font-bold text-gray-900 dark:text-white'>
               ${product.price}
             </span>
-            <button
-              onClick={() => addToCart(product)}
-              className='inline-flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-            >
+            <button className='inline-flex text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>
               Add to cart{' '}
               <svg
                 className='w-5 h-5 ml-1'

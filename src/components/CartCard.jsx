@@ -14,10 +14,7 @@ export const CartCard = (product) => {
           ${product.product.price}
         </p>
       </div>
-      <button
-        className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full'
-        onClick={() => product.removeCart(product.product.id)}
-      >
+      <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='h-6 w-6'

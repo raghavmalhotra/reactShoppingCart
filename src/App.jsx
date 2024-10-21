@@ -70,26 +70,11 @@ function App() {
   const [cart, setCart] = useState([])
   const [cartTotal, setCartTotal] = useState(0)
 
-  const addtCart = (product) => {
-    setCart([...cart, product])
-    setCartTotal(cartTotal + product.price)
-  }
-
-  const removeCart = (id) => {
-    setCart(cart.filter((item) => item.id !== id))
-    setCartTotal(cartTotal - cart.find((item) => item.id === id).price)
-  }
-
   return (
     <div className='dark:bg-black bg-gray-300 min-h-screen'>
       <Header cartTotal={cartTotal} />
 
-      <AllRoutes
-        products={products}
-        cart={cart}
-        addtCart={addtCart}
-        removeCart={removeCart}
-      />
+      <AllRoutes products={products} cart={cart} />
     </div>
   )
 }

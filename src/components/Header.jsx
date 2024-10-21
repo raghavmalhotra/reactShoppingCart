@@ -4,15 +4,19 @@ import { useState, useEffect } from 'react'
 import { MoonIcon, SunIcon } from '../icons/'
 import logo from '../assets/img/logo.svg'
 
-export const Header = ({ cartTotal }) => {
+export const Header = () => {
   const [showNav, setShowNav] = useState(false)
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem('theme') === 'dark' ? true : false
+  )
 
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
     } else {
       document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
     }
   }, [darkMode])
 
@@ -59,7 +63,7 @@ export const Header = ({ cartTotal }) => {
                   d='M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z'
                 />
               </svg>
-              ${cartTotal}
+              $0
             </span>
           </Link>
           <button
