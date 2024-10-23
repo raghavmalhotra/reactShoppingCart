@@ -1,4 +1,7 @@
+import { useCart } from '../context/CartContext'
+
 export const CartCard = (product) => {
+  const { removeFromCart } = useCart()
   return (
     <div className='flex flex-col items-center bg-white border border-gray-200  shadow md:flex-row md:max-w-screen-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 px-4 min-w-full md:py-2 rounded-lg py-8  justify-between'>
       <img
@@ -14,7 +17,10 @@ export const CartCard = (product) => {
           ${product.product.price}
         </p>
       </div>
-      <button className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full'>
+      <button
+        className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full'
+        onClick={() => removeFromCart(product)}
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='h-6 w-6'

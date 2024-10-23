@@ -3,12 +3,24 @@ import { Link, NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { MoonIcon, SunIcon } from '../icons/'
 import logo from '../assets/img/logo.svg'
+import { useCart } from '../context/CartContext'
 
 export const Header = () => {
   const [showNav, setShowNav] = useState(false)
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem('theme') === 'dark' ? true : false
   )
+
+  const [cartToatal, setCartTotal] = useState(0)
+  const { cart } = useCart()
+
+  useEffect(() => {
+    let total = 0
+    cart.forEach((item) => {
+      total += item.price
+    })
+    setCartTotal(total)
+  }, [cart])
 
   useEffect(() => {
     if (darkMode) {
@@ -63,7 +75,7 @@ export const Header = () => {
                   d='M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z'
                 />
               </svg>
-              $0
+              ${cartToatal}
             </span>
           </Link>
           <button
