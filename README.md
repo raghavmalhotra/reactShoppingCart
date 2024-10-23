@@ -13,7 +13,7 @@ The design is fully customizable and can be easily integrated into any existing 
 
 ## Demo
 
-A live demo of the cart component can be found [here](https://shopping-cart-concept-design.netlify.app/).
+A live demo of the cart component can be found [here](https://shoppingcart232.netlify.app/).
 
 ## Installation
 
@@ -46,4 +46,6 @@ const App = () => {
     />
   );
 };
+/*************  ✨ Codeium Command ⭐  *************/
+/******  56ae0626-3d23-41ad-a952-8906f8b954f8  *******/
 ```
