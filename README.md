@@ -1,4 +1,4 @@
-# Shopping Cart Concept Design
+# Shopping Cart Concept Design USING CONTEXT API
 
 This project is a concept design for a shopping cart component for a potential e-commerce project. The design is built using React, Tailwind CSS, and Vite.
 
